@@ -1,0 +1,21 @@
+package com.example.iq02;
+
+public class Const {
+    public static final String USER_TABLE = "users";
+    //создаём константы, чтобы обрщаться к ним
+    //public - для обращения из любого класса
+    //static - для обращеия без создания объекта на основе этого класса
+    //final - переменная становится константой (название принято записывать
+    // в верхнем регистре) - если название таблицы меняем - тут меняем
+    public static final String USER_ID = "idusers";
+    public static final String USER_NAME = "фио";
+    public static final String USER_GROUP = "группа";
+    public static final String USER_BORN = "дата рождения";
+    public static final String USER_EMAIL = "почта";
+    public static final String USER_QUAS = "секретный вопрос";
+    public static final String USER_ANS = "ответ на вопрос";
+    public static final String USER_PHONE = "номер телефона";
+    public static final String USER_LOG = "логин";
+    public static final String USER_PASS = "пароль";
+
+}
