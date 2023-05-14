@@ -1,0 +1,49 @@
+package com.example.iq02;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+public class SignUpController {
+
+    @FXML
+    private TextField FIO;
+
+    @FXML
+    private TextField d;
+
+    @FXML
+    private DatePicker dr;
+
+    @FXML
+    private TextField grou;
+
+    @FXML
+    private TextField hon;
+
+    @FXML
+    private TextField ll12;
+
+    @FXML
+    private PasswordField logn1;
+
+    @FXML
+    private TextField ns;
+
+    @FXML
+    private MenuButton quto;
+
+    @FXML
+    private Button signUpP;
+
+    @FXML
+    private PasswordField soo2;
+
+    @FXML
+    private Label xz;
+
+}
