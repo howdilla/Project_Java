@@ -1,0 +1,46 @@
+package com.example.iq02;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class TestSelectionConroller {
+
+    @FXML
+    private Button blockTest_button;
+
+    @FXML
+    private Button cancal_button_testing;
+
+    @FXML
+    private Button finalTest_button;
+
+    @FXML
+    private Button results_buton;
+
+    //goCancel_testCollection
+    @FXML
+    void goCancel_testCollection() {
+        cancal_button_testing.setOnAction(event ->{
+            cancal_button_testing.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("officeUser.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+}
