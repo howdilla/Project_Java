@@ -1,0 +1,53 @@
+package com.example.iq02;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class ChangePasswController {
+
+    @FXML
+    private Button cancel_editPass;
+
+    @FXML
+    private Button confirm_editPass;
+
+    @FXML
+    private TextField newPass_editPass;
+
+    @FXML
+    private TextField oldPass_editPass;
+
+    @FXML
+    private TextField repeatPass_editPass;
+
+    @FXML
+    private Text text_editPass;
+
+    @FXML
+    void goCancel_editPass() {
+        cancel_editPass.setOnAction(event ->{
+            cancel_editPass.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("officeUser.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+}
