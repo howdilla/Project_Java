@@ -1,0 +1,115 @@
+package com.example.iq02;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class officeUserController {
+
+    @FXML
+    private TextField dr_account;
+
+    @FXML
+    private Button editPass_button;
+
+    @FXML
+    private Button editProfile_button;
+
+    @FXML
+    private TextField email_account;
+
+    @FXML
+    private TextField group_account;
+
+    @FXML
+    private TextField login_account;
+
+    @FXML
+    private Text nameUser;
+
+    @FXML
+    private Text nameUser1;
+
+    @FXML
+    private Text nameUser11;
+
+    @FXML
+    private Text nameUser111;
+
+    @FXML
+    private Text nameUser112;
+
+    @FXML
+    private TextField name_account;
+
+    @FXML
+    private TextField phone_account;
+
+    @FXML
+    private Button testingAccount_button;
+
+    @FXML
+    void goEditPassw() {
+        editPass_button.setOnAction(event ->{
+            editPass_button.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("ChangePassw.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+    @FXML
+    void goEditOffice() {
+        editProfile_button.setOnAction(event ->{
+            editProfile_button.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("ChangeOffice.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+    @FXML
+    void goTestinge() {
+        testingAccount_button.setOnAction(event ->{
+            testingAccount_button.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("TestSelection.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+}
