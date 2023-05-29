@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iq02.ChangeOfficeController">
+   <children>
+      <Label layoutX="56.0" layoutY="119.0" prefHeight="28.0" prefWidth="128.0" />
+      <Button fx:id="ok_editProfile" layoutX="127.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Ок" />
+      <DatePicker fx:id="dr_editProfile" layoutX="20.0" layoutY="133.0" prefHeight="28.0" prefWidth="184.0" promptText="Выберите дату рождения" />
+      <TextField fx:id="FIO_editProfile" layoutX="20.0" layoutY="63.0" promptText="ФИО" />
+      <TextField fx:id="group_editProfile" layoutX="20.0" layoutY="94.0" promptText="Группа" />
+      <TextField fx:id="email_editProfile" layoutX="212.0" layoutY="63.0" promptText="Почта" />
+      <TextField fx:id="phone_editProfile" layoutX="212.0" layoutY="94.0" promptText="Номер телефона" />
+      <Label fx:id="picture_editProfile" layoutX="225.0" layoutY="187.0" text="Добавьте изображение?" />
+      <Button fx:id="cancel_editProfile" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" onAction="#goCancel_editOffice" text="Отмена" />
+      <Label fx:id="text_editProfile" layoutX="139.0" layoutY="21.0" text="Редакция профиля">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
