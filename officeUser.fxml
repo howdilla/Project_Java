@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iq02.officeUserController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="370.0" prefWidth="547.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ButtonBar layoutX="5.0" layoutY="360.0" prefHeight="40.0" prefWidth="629.0">
+              <buttons>
+                <Button fx:id="testingAccount_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goTestinge" prefHeight="26.0" prefWidth="674.0" text="Тестирование" />
+              </buttons>
+            </ButtonBar>
+            <TilePane layoutX="79.0" layoutY="99.0" prefHeight="118.0" prefWidth="148.0" />
+            <Text fx:id="nameUser" layoutX="36.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО:" wrappingWidth="62.136688232421875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="nameUser1" layoutX="36.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Группа:" wrappingWidth="82.93670654296875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="nameUser11" layoutX="266.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения:" wrappingWidth="162.93670654296875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="nameUser111" layoutX="266.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Почта:" wrappingWidth="162.93670654296875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="nameUser112" layoutX="266.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона:" wrappingWidth="175.7366943359375">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="name_account" layoutX="98.0" layoutY="20.0" prefHeight="26.0" prefWidth="148.0" text="Иванов Иван" />
+            <TextField fx:id="group_account" layoutX="111.0" layoutY="56.0" prefHeight="26.0" prefWidth="83.0" text="22БИ1" />
+            <TextField fx:id="dr_account" layoutX="435.0" layoutY="81.0" prefHeight="26.0" prefWidth="121.0" text="01.01.2003" />
+            <TextField fx:id="email_account" layoutX="347.0" layoutY="120.0" prefHeight="26.0" prefWidth="121.0" text="bibibi@gmail.com" />
+            <TextField fx:id="phone_account" layoutX="449.0" layoutY="159.0" prefHeight="26.0" prefWidth="121.0" text="8(920)000-00-00" />
+            <TextField fx:id="login_account" layoutX="92.0" layoutY="227.0" prefHeight="6.0" prefWidth="122.0" text="IvanovIvan" />
+            <Button fx:id="editPass_button" layoutX="110.0" layoutY="314.0" mnemonicParsing="false" onAction="#goEditPassw" prefHeight="26.0" prefWidth="433.0" text="Изменить пароль" />
+            <Button fx:id="editProfile_button" layoutX="110.0" layoutY="276.0" mnemonicParsing="false" onAction="#goEditOffice" prefHeight="26.0" prefWidth="433.0" text="Редактировать" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
