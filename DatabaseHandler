@@ -1,0 +1,57 @@
+package com.example.iq02;
+
+import com.almasb.fxgl.net.Connection;
+
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+
+
+public class DatabaseHandler extends Configs{
+    Connection dbConnection;
+
+    public Connection getDbConnection() throws ClassNotFoundException, SQLException {
+        String connectionString = "jdbs:mysql//" + dbHost + ":"
+                + dbPort + "/" + dbName;
+
+        Class.forName("com.mysql.jdbs.Driver");
+
+        dbConnection = (Connection) DriverManager.getConnection(connectionString, dbUser,
+                dbPass);
+
+        return dbConnection;
+    }
+    //Считывать и читать тут
+    public void signUpUser(String name, String group, String born, String login,
+                           String password, String email, String phone,
+                           String question, String answer) {
+        String insert = "INSERT INTO " + Const.USER_TABEL +
+                "(" + Const.USER_NAME + "," + Const.USER_GROUP + "," +
+                Const.USER_BORN + "," + Const.USER_LOGIN + "," +
+                Const.USER_PASSWORD + "," + Const.USER_EMAIL + "," +
+                Const.USER_PHONE + "," + Const.USER_QUESTION + "," +
+                Const.USER_ANSWER + ")" + "VALUES(?,?,?,?,?,?,?,?,?)"; //sql запрос, для пермещения данных
+
+        PreparedStatement prSt = getDbConnection().prepareStatement(insert); //Выполнение запроса
+        //Он хочет тру хэшить запрос getDbConnection(), но когда я его хэширую, он
+        //не понимает запрос prepareStatement(insert)
+
+        try {
+            prSt.setString(1, name);
+            prSt.setString(2, group);
+            prSt.setString(3, born);
+            prSt.setString(4, login);
+            prSt.setString(5, password);
+            prSt.setString(6, email);
+            prSt.setString(7, phone);
+            prSt.setString(8, question);
+            prSt.setString(9, answer);
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
