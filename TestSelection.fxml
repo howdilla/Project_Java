@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iq02.TestSelectionConroller">
+   <children>
+      <Text layoutX="50.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выбирете вид тестирования">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="finalTest_button" layoutX="100.0" layoutY="76.0" mnemonicParsing="false" text="Итоговый тест">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="blockTest_button" layoutX="100.0" layoutY="116.0" mnemonicParsing="false" text="Тест по блокам">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="results_buton" layoutX="87.0" layoutY="166.0" mnemonicParsing="false" text="Посмотреть результаты" />
+      <Button fx:id="cancal_button_testing" layoutX="232.0" layoutY="232.0" mnemonicParsing="false" onAction="#goCancel_testCollection" prefHeight="15.0" prefWidth="78.0" text="Отмена" />
+   </children>
+</AnchorPane>
