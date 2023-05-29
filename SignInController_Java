@@ -51,4 +51,20 @@ public class HelloController {
             stage.showAndWait();
         });
     }
+    void goSignIn() {
+        SignIn.setOnAction(event -> {
+            String loginText = SignIn_login.getText().trim();//trim - удаляет пробелы
+            String loginPassword = SignIn_password.getText().trim();
+
+            if(!loginText.equals("") && !loginPassword.equals("")) {
+                loginUser(loginText, loginPassword);
+            } else {
+                System.out.println("Вы не ввели логин или пароль");
+            }
+        });
+    }
+
+    private void loginUser(String loginText, String loginPassword) {
+
+    }
 }
